@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/medium_padding"
+        android:layout_marginBottom="@dimen/normal_margin">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        tools:context=".game.HomeFragment">
+
+        <TextView
+            android:id="@+id/Home_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+           android:padding="@dimen/medium_padding"
+            android:contentDescription="@string/dice_roller"
+            android:gravity="center"
+            style="@style/TextAppearance.All"
+            android:text="@string/dice_roller"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/home_image"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:padding="@dimen/normal_padding"
+            android:layout_marginBottom="@dimen/normal_margin"
+            android:contentDescription="@string/dice_roller"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Home_text"
+            app:srcCompat="@drawable/dice_1" />
+
+        <Button
+            android:id="@+id/one_dice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/one_dice"
+            app:layout_constraintVertical_chainStyle="spread_inside"
+            app:layout_constraintBottom_toTopOf="@+id/two_dices"
+            app:layout_constraintTop_toBottomOf="@+id/home_image"
+            tools:layout_editor_absoluteX="16dp" />
+
+        <Button
+            android:id="@+id/two_dices"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/two_dice"
+            app:layout_constraintBottom_toTopOf="@+id/triple_dices"
+            app:layout_constraintTop_toBottomOf="@+id/one_dice"
+            tools:layout_editor_absoluteX="16dp" />
+
+        <Button
+            android:id="@+id/triple_dices"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/triple_dice"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/two_dices"
+            tools:layout_editor_absoluteX="16dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</layout>

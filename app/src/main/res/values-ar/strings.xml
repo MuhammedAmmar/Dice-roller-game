@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name" translatable="true">"النرد"</string>
+
+    <string name="luck_at_1">حظ عثر!</string>
+    <string name="luck_at_2">المزيد من الحظ!</string>
+    <string name="luck_at_3">حظ جيد!</string>
+    <string name="luck_at_4">رائع!</string>
+    <string name="luck_at_5">لقد اقتربت!</string>
+    <string name="luck_at_6">كل الحظ!</string>
+    <string name="start_statement">جرب حظك</string>
+    <string name="dice_content_description">النرد</string>
+
+    <string name="dice_roller"  >النرد</string>
+    <string name="one_dice">نرد واحد</string>
+    <string name="two_dice" >نردان</string>
+    <string name="triple_dice" >ثلاثه</string>
+
+    <string name="nave_item_game">ابدء اللعبه</string>
+    <string name="nave_item_about">عن اللعبه</string>
+
+    <string name="home_screen_title">الصفحه الرئيسية</string>
+    <string name="game_title">النرد</string>
+
+    <string name="score"> النتيجه:%1$d</string>
+
+</resources>

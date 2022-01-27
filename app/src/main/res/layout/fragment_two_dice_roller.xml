@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.moworks.diceroller.game.SharedViewModel" />
+
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".game.TwoDiceFragment">
+
+        <TextView
+            android:id="@+id/luck_statement"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/normal_margin"
+            android:gravity="center"
+            android:text="@string/start_statement"
+            android:layout_marginBottom="@dimen/small_margin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <LinearLayout
+            android:id="@+id/dice_roller_container"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/normal_padding"
+            app:layout_constraintBottom_toTopOf="@+id/score"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/luck_statement"
+            android:onClick="@{()-> viewModel.rollTheDice(2)}">
+
+            <ImageView
+                android:id="@+id/dice_roller_1"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/diceHeight"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/dice_1" />
+
+            <ImageView
+                android:id="@+id/dice_roller_2"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/diceHeight"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/dice_1" />
+
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/normal_margin"
+            android:textAlignment="textStart"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:gravity="start"
+            tools:text="Score:5"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

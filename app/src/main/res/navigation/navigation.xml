@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/home">
+
+    <fragment
+        android:id="@+id/home"
+        android:name="com.moworks.diceroller.game.HomeFragment"
+        android:label="HomeFragment"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_home_to_oneDiceRoller"
+            app:destination="@id/oneDiceRoller"
+            app:enterAnim="@anim/translation"/>
+        <action
+            android:id="@+id/action_home_to_twoDiceRoller"
+            app:destination="@id/twoDiceRoller"
+            app:enterAnim="@anim/translation"/>
+        <action
+            android:id="@+id/action_home_to_trippleDiceRoller"
+            app:destination="@id/trippleDiceRoller"
+            app:enterAnim="@anim/translation"/>
+    </fragment>
+
+
+
+    <fragment
+        android:id="@+id/oneDiceRoller"
+        android:name="com.moworks.diceroller.game.OneDiceFragment"
+        android:label="OneDiceRoller"
+        tools:layout="@layout/fragment_one_dice_roller"/>
+
+    <fragment
+        android:id="@+id/twoDiceRoller"
+        android:name="com.moworks.diceroller.game.TwoDiceFragment"
+        android:label="TwoDiceRoller"
+        tools:layout="@layout/fragment_two_dice_roller"/>
+
+    <fragment
+        android:id="@+id/trippleDiceRoller"
+        android:name="com.moworks.diceroller.game.TripleDiceFragment"
+        android:label="TripleDiceRoller"
+        tools:layout="@layout/fragment_tripple_dice_roller"/>
+    <fragment
+        android:id="@+id/about"
+        android:name="com.moworks.diceroller.AboutFragment"
+        android:label="fragment_about"
+        tools:layout="@layout/fragment_about" />
+</navigation>
